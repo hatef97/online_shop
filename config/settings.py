@@ -14,10 +14,12 @@ from pathlib import Path
 from environs import Env
 import os
 
+from django.contrib.messages import constants
+
+
 # For environments variables
 env = Env()
 env.read_env()
-
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -49,6 +51,9 @@ INSTALLED_APPS = [
     # Allauth package
     'allauth',
     'allauth.account',
+
+    # Rosetta app
+    'rosetta',
 
     # Local App
     'accounts',
@@ -123,12 +128,18 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/4.0/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+# LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'fa'
+LANGUAGES = (
+    ('en', 'English'),
+    ('fa', 'Persian'),
+)
 
-TIME_ZONE = 'UTC'
+# TIME_ZONE = 'UTC'
+TIME_ZONE = 'Asia/Tehran'
 
 USE_I18N = True
-
+USE_L10N = True
 USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
@@ -171,3 +182,8 @@ ACCOUNT_EMAIL_REQUIRED = True
 ACCOUNT_USERNAME_REQUIRED = False
 ACCOUNT_AUTHENTICATION_METHOD = 'email'
 ACCOUNT_UNIQUE_EMAIL = True
+
+# For messages framework
+MESSAGE_TAGS = {
+    constants.ERROR: 'danger',
+}
