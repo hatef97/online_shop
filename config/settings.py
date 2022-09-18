@@ -16,7 +16,6 @@ import os
 
 from django.contrib.messages import constants
 
-
 # For environments variables
 env = Env()
 env.read_env()
@@ -190,3 +189,9 @@ ACCOUNT_UNIQUE_EMAIL = True
 MESSAGE_TAGS = {
     constants.ERROR: 'danger',
 }
+
+# Pillow setting
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = str(BASE_DIR.joinpath('media'))
+
