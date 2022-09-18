@@ -8,6 +8,10 @@
 
 
 {% block content %}
+    <!-- Breadcrumb area-->
+    {% trans 'cart' as header_name %}
+    {% include 'topheader.html' with header_name=header_named %}
+
     <!-- Main Content Wrapper Start -->
     <div class="main-content-wrapper">
         <div class="page-content-inner ptb--80">

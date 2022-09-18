@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-09-18 12:15+0430\n"
-"PO-Revision-Date: 2022-09-14 12:07+0430\n"
+"POT-Creation-Date: 2022-09-18 13:54+0430\n"
+"PO-Revision-Date: 2022-09-18 13:55+0430\n"
 "Last-Translator:   <hatef@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -18,18 +18,34 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Translated-Using: django-rosetta 0.9.8\n"
 
-#: .\cart\cart.py:35
+#: .\cart.py:35
 msgid "Product successfully added to the cart"
 msgstr "محصول با موفقیت به سبد خرید اضافه شد!"
 
-#: .\cart\cart.py:53
+#: .\cart.py:53
 msgid "Product successfully remove from cart"
 msgstr "محصول با موفقیت از سبد خرید حذف شد!"
 
-#: .\cart\templates\cart\cart_detail.html:79
+#: .\templates\cart\cart_detail.html:12 .\templates\cart\cart_sidebar.html:8
+msgid "cart"
+msgstr "سبد خرید"
+
+#: .\templates\cart\cart_detail.html:83
 msgid "Cart is empty! Please add some product to the cart"
 msgstr "سبد خالی است! لطفا مقداری محصول را به سبد خرید اضافه کنید!"
 
-#: .\cart\templates\cart\cart_detail.html:80
+#: .\templates\cart\cart_detail.html:84
 msgid "Go shopping"
 msgstr "رفتن به فروشگاه"
+
+#: .\templates\cart\cart_sidebar.html:33
+msgid "total"
+msgstr "جمع"
+
+#: .\templates\cart\cart_sidebar.html:37
+msgid "go to cart"
+msgstr "رفتن به سبد خرید"
+
+#: .\templates\cart\cart_sidebar.html:38
+msgid "checkout"
+msgstr "پرداخت"
