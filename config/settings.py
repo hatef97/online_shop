@@ -43,6 +43,13 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.humanize',
+
+    # Jalali Date
+    'jalali_date',
+
+    # Ckeditor
+    'ckeditor',
 
     # crispy app
     'crispy_forms',
@@ -59,6 +66,7 @@ INSTALLED_APPS = [
     'pages',
     'products',
     'cart',
+    'persian_translate',
 ]
 
 MIDDLEWARE = [
