@@ -68,6 +68,7 @@ INSTALLED_APPS = [
     'pages',
     'products',
     'cart',
+    'orders',
     'persian_translate',
 ]
 
