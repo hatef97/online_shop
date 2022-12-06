@@ -13,5 +13,6 @@ urlpatterns = [
     path('cart/', include('cart.urls')),
     # Rosetta i18n
     path('rosetta/', include('rosetta.urls')),
+    path('order/', include('orders.urls')),
     # Pillow
 ] + static(settings.MEDIA_URL, document_root=MEDIA_ROOT)
