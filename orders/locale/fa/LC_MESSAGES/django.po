@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-12-06 19:12+0330\n"
-"PO-Revision-Date: 2022-12-06 19:13+0330\n"
+"POT-Creation-Date: 2022-12-10 22:27+0330\n"
+"PO-Revision-Date: 2022-12-10 22:33+0330\n"
 "Last-Translator:   <hatef@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -18,6 +18,43 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Translated-Using: django-rosetta 0.9.8\n"
 
-#: .\templates\orders\order_create.html:12
+#: .\models.py:8
+msgid "User"
+msgstr "کاربر"
+
+#: .\models.py:9
+msgid "Is Paid"
+msgstr "پرداخت شده؟"
+
+#: .\models.py:11
+msgid "First Name"
+msgstr "نام"
+
+#: .\models.py:12
+msgid "Last Name"
+msgstr "نام خانوادگی"
+
+#: .\models.py:13
+msgid "Phone Number"
+msgstr "شماره موبایل"
+
+#: .\models.py:14
+msgid "Address"
+msgstr "آدرس کامل"
+
+#: .\models.py:16
+#| msgid "Order"
+msgid "Order Notes"
+msgstr "یادداشت سفارش"
+
+#: .\models.py:18
+msgid "Datetime Created"
+msgstr "تاریخ ایجاد"
+
+#: .\models.py:19
+msgid "Datetime Modified"
+msgstr "تاریخ تغییر"
+
+#: .\templates\orders\order_create.html:14
 msgid "Order"
 msgstr "ثبت سفارش"
