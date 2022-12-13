@@ -44,7 +44,7 @@
                                                         </a>
                                                     </td>
                                                     <td class="product-thumbnail text-left">
-                                                        <img src="assets/img/products/prod-10-70x88.jpg"
+                                                        <img src="{{ item.product_obj.cover.url }}"
 
                                                     </td>
                                                     <td class="product-name">
@@ -83,17 +83,25 @@
                                         </table>
                                 {% else %}
                                     <p>{% trans 'Cart is empty! Please add some product to the cart' %}</p>
-                                    <a href="{% url 'product_list' %}">{% trans 'Go shopping' %}</a>
+                                    <a class="btn btn-small btn-bg-red btn-color-white btn-hover-2" href="{% url 'product_list' %}">{% trans 'Go shopping' %}</a>
                                 {% endif %}
                                 </div>
                             </div>
                         </div>
-                        <div class="row no-gutters border-top pt--20 mt--20">
-                            <div class="col-sm-6 text-sm-right">
-                                <button type="submit" class="cart-form__btn">خالی کردن سبد خرید</button>
+                    {% if not cart.is_empty %}
+                            <div class="row no-gutters border-top pt--20 mt--20">
+                                <div class="col-sm-6 text-sm-right">
+                                    <form action="{% url 'cart:cart_clear' %}" method="post">
+                                        {% csrf_token %}
+                                        <button type="submit" class="class="btn btn-small btn-bg-red btn-color-white btn-hover-2"">
+                                            {% trans 'Empty cart' %}
+                                        </button>
+                                    </form>
+                                </div>
                             </div>
-                        </div>
+                    {% endif %}
                     </div>
+                {% if not cart.is_empty %}
                     <div class="col-lg-4">
                         <div class="cart-collaterals">
                             <div class="cart-totals">
@@ -119,11 +127,12 @@
                                     </div>
                                 </div>
                             </div>
-                            <a href="checkout.html" class="btn btn-fullwidth btn-bg-red btn-color-white btn-hover-2">
-                                ثبت سفارش
+                            <a href="{% url 'orders:order_create' %}" class="btn btn-fullwidth btn-bg-red btn-color-white btn-hover-2">
+                                {% trans 'Checkout' %}
                             </a>
                         </div>
                     </div>
+                {% endif %}
                 </div>
             </div>
         </div>

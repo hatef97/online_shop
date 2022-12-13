@@ -8,7 +8,6 @@ from .models import OrderItem
 from cart.cart import Cart
 
 
-
 @login_required
 def order_create_view(request):
     order_form = OrderForm()
@@ -41,6 +40,7 @@ def order_create_view(request):
             request.user.save()
 
             messages.success(request, _('Your order has successfully placed.'))
+            return redirect('product_list')
 
     return render(request, 'orders/order_create.html', {
         'form': order_form
